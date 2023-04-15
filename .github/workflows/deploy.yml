@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PW }}
     - name: Building docker
-      run: docker image build . -t "${{ secrets.DOCKER_HUB_USERNAME }}"/rclone_mirror_leech:latest 
+      run: docker image build . -t "${{ secrets.DOCKER_HUB_USERNAME }}"/main:Sam_Docker_GP
 
     - name: Pushing docker to docker.io
-      run: docker push "${{ secrets.DOCKER_HUB_USERNAME }}"/rclone_mirror_leech:latest
+      run: docker push "${{ secrets.DOCKER_HUB_USERNAME }}"/main:Sam_Docker_GP
